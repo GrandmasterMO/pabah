@@ -29,17 +29,14 @@
     .subheader-inner {
       display: flex;
       align-items: center;
-      padding-left: 100px; /* samasugune mõlemal */
+      padding-left: 100px;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
 
     .waveform {
       height: 32px;
-      position: absolute;
-      left: 30px; /* jääb veidi eemale vasakust äärest */
-      top: 50%;
-      transform: translateY(-50%);
+      margin-right: 15px;
     }
 
     .title {
@@ -54,23 +51,17 @@
     .subheader-inner {
       font-size: 1.2rem;
     }
-
-    .header-wrapper {
-      position: relative;
-    }
   </style>
 </head>
 <body>
-  <div class="header-wrapper">
-    <div class="header">
+  <div class="header">
+    <div class="header-inner">
       <img src="images/waveform.png" alt="Waveform" class="waveform" />
-      <div class="header-inner">
-        <div class="title">INFORMATION</div>
-      </div>
+      <div class="title">INFORMATION</div>
     </div>
-    <div class="subheader">
-      <div class="subheader-inner">SEEK AND FIND</div>
-    </div>
+  </div>
+  <div class="subheader">
+    <div class="subheader-inner">SEEK AND FIND</div>
   </div>
 </body>
 </html>
