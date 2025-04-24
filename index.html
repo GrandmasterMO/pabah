@@ -19,19 +19,24 @@
       background-color: #ffffff;
     }
 
-    .header {
+    .header,
+    .subheader {
       background-color: #000;
       color: white;
-      padding: 1rem;
+    }
+
+    .header-inner,
+    .subheader-inner {
       display: flex;
       align-items: center;
-      border-bottom: 2px solid white;
+      padding-left: 60px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
     .waveform {
       height: 32px;
       margin-right: 12px;
-      margin-left: 20px;
     }
 
     .title {
@@ -40,20 +45,23 @@
     }
 
     .subheader {
-      background-color: #000;
-      color: white;
-      padding: 0.75rem 1rem;
       border-top: 2px solid white;
+    }
+
+    .subheader-inner {
       font-size: 1.2rem;
-      padding-left: 20px; /* sama kaugus vasakult kui waveformil */
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="images/waveform.png" alt="Waveform" class="waveform" />
-    <div class="title">INFORMATION</div>
+    <div class="header-inner">
+      <img src="images/waveform.png" alt="Waveform" class="waveform" />
+      <div class="title">INFORMATION</div>
+    </div>
   </div>
-  <div class="subheader">SEEK AND FIND</div>
+  <div class="subheader">
+    <div class="subheader-inner">SEEK AND FIND</div>
+  </div>
 </body>
 </html>
