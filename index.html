@@ -36,12 +36,13 @@
 
     .waveform {
       height: 32px;
+      position: absolute;
+      left: 20px;
     }
 
     .title {
       font-size: 1.6rem;
       letter-spacing: 1px;
-      margin-left: 12px; /* See tagab, et INFORMATION ei hakka kohe pildi järel */
     }
 
     .subheader {
@@ -51,17 +52,23 @@
     .subheader-inner {
       font-size: 1.2rem;
     }
+
+    .header-wrapper {
+      position: relative;
+    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-inner">
+  <div class="header-wrapper">
+    <div class="header">
       <img src="images/waveform.png" alt="Waveform" class="waveform" />
-      <div class="title">INFORMATION</div>
+      <div class="header-inner">
+        <div class="title">INFORMATION</div>
+      </div>
     </div>
-  </div>
-  <div class="subheader">
-    <div class="subheader-inner">SEEK AND FIND</div>
+    <div class="subheader">
+      <div class="subheader-inner">SEEK AND FIND</div>
+    </div>
   </div>
 </body>
 </html>
