@@ -16,47 +16,42 @@
       margin: 0;
       padding: 0;
       font-family: 'EarlyMan', sans-serif;
-      background-color: #fff;
+      background-color: #ffffff;
     }
 
     .header {
-      display: flex;
-      align-items: center;
       background-color: #000;
       color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
       border-bottom: 2px solid white;
     }
 
-    .header_icon {
-      margin-right: 1rem;
-    }
-
-    .header_icon img {
-      height: 36px;
-      width: auto;
-      display: block;
+    .waveform {
+      height: 32px;
+      margin-right: 12px;
+      margin-left: 20px;
     }
 
     .title {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
       letter-spacing: 1px;
     }
 
     .subheader {
       background-color: #000;
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-bottom: 2px solid white;
+      padding: 0.75rem 1rem;
+      border-top: 2px solid white;
       font-size: 1.2rem;
+      padding-left: 20px; /* sama kaugus vasakult kui waveformil */
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="header_icon">
-      <img src="waveform.png" alt="Waveform" />
-    </div>
+    <img src="images/waveform.png" alt="Waveform" class="waveform" />
     <div class="title">INFORMATION</div>
   </div>
   <div class="subheader">SEEK AND FIND</div>
