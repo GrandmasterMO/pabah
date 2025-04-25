@@ -7,7 +7,7 @@
   <style>
     @font-face {
       font-family: 'EarlyMan';
-      src: url("fonts/EarlyMan.otf") format("opentype");
+      src: url('fonts/EarlyMan.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
     }
@@ -16,47 +16,44 @@
       margin: 0;
       padding: 0;
       font-family: 'EarlyMan', sans-serif;
-      background-color: #fff;
+      background-color: #ffffff;
     }
 
-    .container {
-      padding-left: 1.5rem; /* ühtne vasak joondus */
+    .header, .subheader {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
     }
 
     .header {
-      display: flex;
-      align-items: center;
-      background-color: #000;
-      color: #fff;
-      padding: 1.5rem 0;
-    }
-
-    .header img {
-      height: 40px; /* 20% suurem võrreldes eelneva umbes 30px-ga */
-      margin-right: 1rem;
-    }
-
-    .header-title {
-      font-size: 2rem;
-      letter-spacing: 1px;
+      justify-content: flex-start;
     }
 
     .subheader {
-      background-color: #000;
-      color: white;
-      font-size: 1.2rem;
-      padding: 1rem 0;
       border-top: 2px solid white;
+      justify-content: flex-start;
+    }
+
+    .waveform {
+      height: 50px;
+      margin-right: 1rem;
+    }
+
+    .title, .subtitle {
+      font-size: 2rem;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="images/waveform.png" alt="Waveform" />
-      <div class="header-title">INFORMATION</div>
-    </div>
-    <div class="subheader">SEEK AND FIND</div>
+  <div class="header">
+    <img src="images/waveform.png" alt="Waveform" class="waveform" />
+    <div class="title">INFORMATION</div>
+  </div>
+  <div class="subheader">
+    <div class="subtitle">SEEK AND FIND</div>
   </div>
 </body>
 </html>
