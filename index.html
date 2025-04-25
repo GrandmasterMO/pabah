@@ -6,8 +6,8 @@
   <title>INFORMATION</title>
   <style>
     @font-face {
-      font-family: 'EarlyMan';
-      src: url('fonts/EarlyMan.otf') format('opentype');
+      font-family: 'GovtAgentBB';
+      src: url('fonts/GovtAgentBB.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
     }
@@ -15,45 +15,44 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'EarlyMan', sans-serif;
       background-color: #ffffff;
-    }
-
-    .header, .subheader {
-      background-color: #000;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
+      font-family: 'GovtAgentBB', sans-serif;
     }
 
     .header {
-      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+      background-color: #000;
+      padding: 2rem 3rem;
+      border-bottom: 2px solid white;
+    }
+
+    .header img {
+      height: 48px;
+      width: auto;
+      margin-right: 1.2rem;
+    }
+
+    .header .title {
+      font-size: 3rem;
+      color: white;
+      letter-spacing: 1px;
     }
 
     .subheader {
-      border-top: 2px solid white;
-      justify-content: flex-start;
-    }
-
-    .waveform {
-      height: 50px;
-      margin-right: 1rem;
-    }
-
-    .title, .subtitle {
-      font-size: 2rem;
-      letter-spacing: 1px;
+      background-color: #000;
+      color: white;
+      font-size: 1.5rem;
+      padding: 1rem 6.85rem;
+      border-bottom: 1px solid white;
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="images/waveform.png" alt="Waveform" class="waveform" />
+    <img src="images/waveform.png" alt="Waveform" />
     <div class="title">INFORMATION</div>
   </div>
-  <div class="subheader">
-    <div class="subtitle">SEEK AND FIND</div>
-  </div>
+  <div class="subheader">SEEK and FIND</div>
 </body>
 </html>
