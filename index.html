@@ -19,6 +19,13 @@
       display: block;
     }
 
+    /* Must eraldusriba */
+    .divider {
+      background-color: #000;
+      height: 30px;
+      width: 100%;
+    }
+
     /* Search bar */
     .search-container {
       text-align: center;
@@ -74,10 +81,10 @@
       color: #555;
     }
 
-    /* Contact section */
+    /* Kontakt (footer) riba */
     .contact {
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       font-size: 1rem;
       background-color: #000;
       color: #fff;
@@ -97,15 +104,18 @@
 </head>
 <body>
 
-  <!-- Banner -->
+  <!-- HEADER PILDID -->
   <img src="images/header3.png" alt="Header Banner" class="header-image" />
 
-  <!-- Search Bar -->
+  <!-- UUS MUST RIBA KOHE HEADERI ALL -->
+  <div class="divider"></div>
+
+  <!-- OTSINGUKAST -->
   <div class="search-container">
     <input type="text" id="searchInput" onkeyup="searchStories()" placeholder="Search stories...">
   </div>
 
-  <!-- Stories Section -->
+  <!-- STORIES SECTION -->
   <div class="stories" id="storyGrid">
 
     <div class="story">
@@ -140,7 +150,7 @@
 
   </div>
 
-  <!-- Contact Section -->
+  <!-- FOOTER KONTAKT -->
   <div class="contact">
     Contact: <a href="mailto:info@pabah.com">info@pabah.com</a>
   </div>
