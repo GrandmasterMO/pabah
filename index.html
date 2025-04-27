@@ -1,41 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INFORMATION</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
-
-  <!-- GovtAgentBB font -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <style>
-    @font-face {
-      font-family: 'GovtAgentBB';
-      src: url('fonts/GovtAgentBB.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
     body {
       margin: 0;
-      padding: 0;
-      background-color: #fff;
       font-family: 'GovtAgentBB', sans-serif;
+      background-color: #fff;
     }
 
+    /* Banner */
     .header-image {
       width: 100%;
-      max-width: 100%;
       height: auto;
       display: block;
+    }
+
+    /* Search bar */
+    .search-container {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .search-container input[type="text"] {
+      width: 80%;
+      max-width: 500px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Stories Grid */
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .story {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .story img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .story-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      padding: 0 1rem;
+    }
+
+    .story-lead {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      padding: 0 1rem;
+      color: #555;
+    }
+
+    /* Contact section */
+    .contact {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .stories {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Pildina kogu ülemine header -->
-  <img src="images/header2.png" alt="Header Banner" class="header-image" />
+  <!-- Banner -->
+  <img src="images/header3.png" alt="Header Banner" class="header-image" />
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchStories()" placeholder="Search stories...">
+  </div>
+
+  <!-- Stories Section -->
+  <div class="stories" id="storyGrid">
+
+    <div class="story">
+      <img src="images/thumbnail1.jpg" alt="Story 1">
+      <div class="story-title">STORY ONE</div>
+      <div class="story-lead">This is the lead text for story one.</div>
+    </div>
+
+    <div class="story">
+      <img src="images/thumbnail2.jpg" alt="Story 2">
+      <div class="story-title">STORY TWO</div>
+      <div class="story-lead">This is the lead text for story two.</div>
+    </div>
+
+    <div class="story">
+      <img src="images/thumbnail3.jpg" alt="Story 3">
+      <div class="story-title">STORY THREE</div>
+      <div class="story-lead">This is the lead text for story three.</div>
+    </div>
+
+    <div class="story">
+      <img src="images/thumbnail4.jpg" alt="Story 4">
+      <div class="story-title">STORY FOUR</div>
+      <div class="story-lead">This is the lead text for story four.</div>
+    </div>
+
+    <div class="story">
+      <img src="images/thumbnail5.jpg" alt="Story 5">
+      <div class="story-title">STORY FIVE</div>
+      <div class="story-lead">This is the lead text for story five.</div>
+    </div>
+
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact">
+    Contact: <a href="mailto:your@email.com">your@email.com</a>
+  </div>
+
+  <!-- Simple search script -->
+  <script>
+    function searchStories() {
+      var input, filter, grid, stories, title, lead, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      grid = document.getElementById('storyGrid');
+      stories = grid.getElementsByClassName('story');
+
+      for (i = 0; i < stories.length; i++) {
+        title = stories[i].getElementsByClassName('story-title')[0];
+        lead = stories[i].getElementsByClassName('story-lead')[0];
+        txtValue = title.textContent + " " + lead.textContent;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          stories[i].style.display = "";
+        } else {
+          stories[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 
 </body>
 </html>
