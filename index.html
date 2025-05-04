@@ -1,145 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INFORMATION</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Fonts -->
-  <style>
-    @font-face {
-      font-family: 'GovtAgentBB';
-      src: url('fonts/GovtAgentBB.otf') format('opentype');
-    }
-    @font-face {
-      font-family: 'Roboto';
-      src: url('fonts/Roboto-Regular.ttf') format('truetype');
-      font-weight: normal;
-    }
-    @font-face {
-      font-family: 'Roboto';
-      src: url('fonts/Roboto-Bold.ttf') format('truetype');
-      font-weight: bold;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #fff;
-    }
-
-    .header-image {
-      width: 100%;
-      display: block;
-    }
-
-    .black-bar {
-      width: 100%;
-      height: 20px;
-      background-color: black;
-    }
-
-    .search-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .search-container input {
-      padding: 10px;
-      width: 50%;
-      max-width: 400px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .stories {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .story {
-      width: 220px;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .story img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .story-title {
-      font-weight: bold;
-      font-size: 16px;
-      margin: 10px 0 5px;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .contact-bar {
-      width: 100%;
-      background-color: black;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 14px;
-    }
-
-    .contact-bar a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .story {
-        width: 90%;
-        max-width: 300px;
-        text-align: center;
-      }
-    }
-  </style>
-
-  <script>
-    function openStory(page) {
-      window.location.href = page;
-    }
-  </script>
-</head>
-<body>
-  <img src="images/header4.png" alt="Header Banner" class="header-image" />
-
-  <div class="black-bar"></div>
-
-  <div class="search-container">
-    <input type="text" placeholder="Search stories...">
+<!-- This is the updated index.html snippet for your main stories grid -->
+<div class="stories">
+  <div class="story">
+    <a href="hypnos-cleers.html">
+      <div class="story-title-overlay">HYPNOS AND CLEERS</div>
+      <img src="images/masshypnosis2.jpg" alt="Story 1">
+    </a>
   </div>
-
-  <div class="stories">
-    <div class="story" onclick="openStory('hypnos-cleers.html')">
-      <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
-      <div class="story-title">HYPNOS AND CLEERS</div>
-    </div>
-    <div class="story" onclick="openStory('story2.html')">
+  <div class="story">
+    <a href="#">
       <img src="images/story2.png" alt="Story 2">
-      <div class="story-title">HEADLINE 2</div>
-    </div>
-    <div class="story" onclick="openStory('story3.html')">
+      <div class="story-title">CHAPTERS OF SELF-HELP</div>
+    </a>
+  </div>
+  <div class="story">
+    <a href="#">
       <img src="images/story3.png" alt="Story 3">
       <div class="story-title">HEADLINE 3</div>
-    </div>
-    <div class="story" onclick="openStory('story4.html')">
+    </a>
+  </div>
+  <div class="story">
+    <a href="#">
       <img src="images/story4.png" alt="Story 4">
       <div class="story-title">HEADLINE 4</div>
-    </div>
+    </a>
   </div>
+</div>
 
-  <div class="contact-bar">
-    Contact: <a href="mailto:info@pabah.com">info@pabah.com</a>
-  </div>
-</body>
-</html>
+<!-- CSS update -->
+<style>
+.story {
+  position: relative;
+  width: 220px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.story img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.story-title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-transform: uppercase;
+}
+</style>
