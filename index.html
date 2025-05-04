@@ -14,10 +14,15 @@
       font-family: 'GovtAgentBB';
       src: url('fonts/GovtAgentBB.otf') format('opentype');
     }
-
     @font-face {
       font-family: 'Roboto';
       src: url('fonts/Roboto-Regular.ttf') format('truetype');
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      src: url('fonts/Roboto-Bold.ttf') format('truetype');
+      font-weight: bold;
     }
 
     body {
@@ -25,7 +30,6 @@
       padding: 0;
       background-color: #fff;
       font-family: 'Roboto', sans-serif;
-      color: #111;
     }
 
     .header-image {
@@ -56,45 +60,29 @@
 
     .stories {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 40px;
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
 
     .story {
-      width: 100%;
+      width: 200px;
+      text-align: left;
+      cursor: pointer;
     }
 
     .story img {
       width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-bottom: 20px;
     }
 
     .story-title {
-      font-family: 'GovtAgentBB', sans-serif;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .story-lead {
-      font-size: 16px;
+      font-family: 'Roboto';
       font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .story-body {
+      margin-top: 8px;
       font-size: 16px;
-      line-height: 1.6;
-      text-align: left;
-    }
-
-    .story-body b {
-      font-weight: bold;
     }
 
     .contact-bar {
@@ -116,21 +104,13 @@
         width: 80%;
       }
 
+      .story {
+        width: 90%;
+        max-width: 300px;
+      }
+
       .black-bar {
         height: 10px;
-      }
-
-      .header-image {
-        max-height: 180px;
-        object-fit: cover;
-      }
-
-      .stories {
-        padding: 20px;
-      }
-
-      .story-title {
-        font-size: 20px;
       }
     }
   </style>
@@ -138,7 +118,6 @@
 <body>
 
   <img src="images/header4.png" alt="Header Banner" class="header-image" />
-
   <div class="black-bar"></div>
 
   <div class="search-container">
@@ -146,48 +125,11 @@
   </div>
 
   <div class="stories">
-    <div class="story">
-      <img src="images/masshypnosis2.jpg" alt="Hypnosis Crowd" />
-      <div class="story-title">HUMAN DIVISION: HYPNOS and CLEERS</div>
-      <div class="story-lead">
-        HYPNOS are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement and CLEERS are the Non-Hypnotizable.
-      </div>
-      <div class="story-body">
-        <b>THE DIVISION OF HUMANKIND: HYPNOS AND CLEERS</b><br><br>
-
-        <b>HYPNOS – The Hypnotizable</b> (approximately 65–75% of the population)<br><br>
-
-        <b>Origin:</b> The term derives from the Latin «hypnos» (sleep) and the suffix «-oid» (form, kind, type).<br><br>
-
-        <b>Brief Description:</b> Hypnoids are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement.<br><br>
-
-        <b>Characteristics:</b><br>
-        • People live in a mechanical reaction pattern: feeling → media → reaction → forgetting.<br>
-        • Constantly consume information, but with minimal analysis.<br>
-        • Language is loaded with system-internal thoughts and slogans, yet empty of inner reflection.<br>
-        • They see, but do not observe. They hear, but do not listen.<br><br>
-
-        <b>Social Role:</b><br>
-        • They feed on ideological hyperreality.<br>
-        • They maintain the stability of the system, even when it is hollow inside.<br><br>
-
-        <b>SUBTYPES OF HYPNOS:</b><br>
-        • Hyper-Hypnos – highly susceptible to hypnosis (10–15%)<br>
-        • Drifting Hypnos – moderately susceptible (45–60%)<br><br>
-
-        <b>HYPER-HYPNOS</b><br>
-        Extremely vulnerable to mass hypnosis. Respond rapidly and completely to collective influences.<br><br>
-
-        <b>DRIFTING HYPNOS</b><br>
-        Sense something is wrong but cannot break free. Require inner or external “call” to awaken.<br><br>
-
-        <b>CLEERS – The Non-Hypnotizable</b> (15–25% of the population)<br>
-        • Not affected by the hypnotron. They live in clarity.<br>
-        • Their presence awakens only those who are ready.<br><br>
-
-        <i>(This typology does not offer absolute definitions but rather a framework for understanding the different layers of human psychology and consciousness in the era of mass phenomena.)</i>
-      </div>
+    <div class="story" onclick="location.href='hypnos-cleers.html'">
+      <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
+      <div class="story-title">HYPNOS AND CLEERS</div>
     </div>
+    <!-- Future stories go here -->
   </div>
 
   <div class="contact-bar">
