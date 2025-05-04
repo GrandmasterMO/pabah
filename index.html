@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INFORMATION</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <!-- Fonts -->
   <style>
@@ -28,13 +26,12 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #fff;
       font-family: 'Roboto', sans-serif;
+      background-color: #fff;
     }
 
     .header-image {
       width: 100%;
-      height: auto;
       display: block;
     }
 
@@ -67,22 +64,21 @@
     }
 
     .story {
-      width: 200px;
+      width: 220px;
       text-align: left;
       cursor: pointer;
     }
 
     .story img {
       width: 100%;
-      height: auto;
       border-radius: 8px;
     }
 
     .story-title {
-      font-family: 'Roboto';
       font-weight: bold;
-      margin-top: 8px;
       font-size: 16px;
+      margin: 10px 0 5px;
+      font-family: 'Roboto', sans-serif;
     }
 
     .contact-bar {
@@ -100,24 +96,23 @@
     }
 
     @media (max-width: 768px) {
-      .search-container input {
-        width: 80%;
-      }
-
       .story {
         width: 90%;
         max-width: 300px;
-      }
-
-      .black-bar {
-        height: 10px;
+        text-align: center;
       }
     }
   </style>
+
+  <script>
+    function openStory(page) {
+      window.location.href = page;
+    }
+  </script>
 </head>
 <body>
-
   <img src="images/header4.png" alt="Header Banner" class="header-image" />
+
   <div class="black-bar"></div>
 
   <div class="search-container">
@@ -125,16 +120,26 @@
   </div>
 
   <div class="stories">
-    <div class="story" onclick="location.href='hypnos-cleers.html'">
+    <div class="story" onclick="openStory('hypnos-cleers.html')">
       <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
       <div class="story-title">HYPNOS AND CLEERS</div>
     </div>
-    <!-- Future stories go here -->
+    <div class="story" onclick="openStory('story2.html')">
+      <img src="images/story2.png" alt="Story 2">
+      <div class="story-title">HEADLINE 2</div>
+    </div>
+    <div class="story" onclick="openStory('story3.html')">
+      <img src="images/story3.png" alt="Story 3">
+      <div class="story-title">HEADLINE 3</div>
+    </div>
+    <div class="story" onclick="openStory('story4.html')">
+      <img src="images/story4.png" alt="Story 4">
+      <div class="story-title">HEADLINE 4</div>
+    </div>
   </div>
 
   <div class="contact-bar">
     Contact: <a href="mailto:info@pabah.com">info@pabah.com</a>
   </div>
-
 </body>
 </html>
