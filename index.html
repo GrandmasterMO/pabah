@@ -8,20 +8,24 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- GovtAgentBB font -->
+  <!-- Fonts -->
   <style>
     @font-face {
       font-family: 'GovtAgentBB';
       src: url('fonts/GovtAgentBB.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('fonts/Roboto-Regular.ttf') format('truetype');
     }
 
     body {
       margin: 0;
       padding: 0;
       background-color: #fff;
-      font-family: 'GovtAgentBB', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      color: #111;
     }
 
     .header-image {
@@ -52,37 +56,45 @@
 
     .stories {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .story {
-      width: 200px;
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      text-align: center;
-      padding: 15px;
+      width: 100%;
     }
 
     .story img {
       width: 100%;
       height: auto;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
 
     .story-title {
-      font-weight: bold;
-      font-size: 18px;
-      margin: 10px 0 5px 0;
+      font-family: 'GovtAgentBB', sans-serif;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
     .story-lead {
-      font-size: 14px;
-      color: #666;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .story-body {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .story-body b {
+      font-weight: bold;
     }
 
     .contact-bar {
@@ -99,15 +111,9 @@
       text-decoration: underline;
     }
 
-    /* --- Responsive Design for Mobile --- */
     @media (max-width: 768px) {
       .search-container input {
         width: 80%;
-      }
-
-      .story {
-        width: 90%;
-        max-width: 300px;
       }
 
       .black-bar {
@@ -115,9 +121,16 @@
       }
 
       .header-image {
-        height: auto;
         max-height: 180px;
         object-fit: cover;
+      }
+
+      .stories {
+        padding: 20px;
+      }
+
+      .story-title {
+        font-size: 20px;
       }
     }
   </style>
@@ -134,29 +147,46 @@
 
   <div class="stories">
     <div class="story">
-      <img src="images/story1.png" alt="Story 1">
-      <div class="story-title">STORY ONE</div>
-      <div class="story-lead">This is the lead text for story one.</div>
-    </div>
-    <div class="story">
-      <img src="images/story2.png" alt="Story 2">
-      <div class="story-title">STORY TWO</div>
-      <div class="story-lead">This is the lead text for story two.</div>
-    </div>
-    <div class="story">
-      <img src="images/story3.png" alt="Story 3">
-      <div class="story-title">STORY THREE</div>
-      <div class="story-lead">This is the lead text for story three.</div>
-    </div>
-    <div class="story">
-      <img src="images/story4.png" alt="Story 4">
-      <div class="story-title">STORY FOUR</div>
-      <div class="story-lead">This is the lead text for story four.</div>
-    </div>
-    <div class="story">
-      <img src="images/story5.png" alt="Story 5">
-      <div class="story-title">STORY FIVE</div>
-      <div class="story-lead">This is the lead text for story five.</div>
+      <img src="images/masshypnosis2.jpg" alt="Hypnosis Crowd" />
+      <div class="story-title">HUMAN DIVISION: HYPNOS and CLEERS</div>
+      <div class="story-lead">
+        HYPNOS are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement and CLEERS are the Non-Hypnotizable.
+      </div>
+      <div class="story-body">
+        <b>THE DIVISION OF HUMANKIND: HYPNOS AND CLEERS</b><br><br>
+
+        <b>HYPNOS – The Hypnotizable</b> (approximately 65–75% of the population)<br><br>
+
+        <b>Origin:</b> The term derives from the Latin «hypnos» (sleep) and the suffix «-oid» (form, kind, type).<br><br>
+
+        <b>Brief Description:</b> Hypnoids are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement.<br><br>
+
+        <b>Characteristics:</b><br>
+        • People live in a mechanical reaction pattern: feeling → media → reaction → forgetting.<br>
+        • Constantly consume information, but with minimal analysis.<br>
+        • Language is loaded with system-internal thoughts and slogans, yet empty of inner reflection.<br>
+        • They see, but do not observe. They hear, but do not listen.<br><br>
+
+        <b>Social Role:</b><br>
+        • They feed on ideological hyperreality.<br>
+        • They maintain the stability of the system, even when it is hollow inside.<br><br>
+
+        <b>SUBTYPES OF HYPNOS:</b><br>
+        • Hyper-Hypnos – highly susceptible to hypnosis (10–15%)<br>
+        • Drifting Hypnos – moderately susceptible (45–60%)<br><br>
+
+        <b>HYPER-HYPNOS</b><br>
+        Extremely vulnerable to mass hypnosis. Respond rapidly and completely to collective influences.<br><br>
+
+        <b>DRIFTING HYPNOS</b><br>
+        Sense something is wrong but cannot break free. Require inner or external “call” to awaken.<br><br>
+
+        <b>CLEERS – The Non-Hypnotizable</b> (15–25% of the population)<br>
+        • Not affected by the hypnotron. They live in clarity.<br>
+        • Their presence awakens only those who are ready.<br><br>
+
+        <i>(This typology does not offer absolute definitions but rather a framework for understanding the different layers of human psychology and consciousness in the era of mass phenomena.)</i>
+      </div>
     </div>
   </div>
 
