@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>INFORMATION</title>
+  <title>PABAH.COM</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
-    /* --- Fondid --- */
+    /* --- Fonts --- */
     @font-face {
       font-family: 'Roboto-Regular';
       src: url('fonts/Roboto-Regular.ttf') format('truetype');
@@ -25,11 +25,12 @@
       margin: 0;
       padding: 0;
       background: #fff;
-      font-family: 'Roboto-Regular', sans-serif;
       color: #000;
+      font-family: 'Roboto-Regular', sans-serif;
+      line-height: 1.6;
     }
 
-    /* --- Header --- */
+    /* --- Header & Divider --- */
     .header {
       position: relative;
       width: 100%;
@@ -42,14 +43,12 @@
       height: auto;
       display: block;
     }
-
-    /* õhuke must triip headeri alla */
-    .header-divider {
+    .divider {
       height: 4px;
       background: #000;
     }
 
-    /* --- Lugude galerii --- */
+    /* --- Story Grid --- */
     .stories {
       display: flex;
       flex-wrap: wrap;
@@ -58,28 +57,31 @@
       padding: 40px 20px;
     }
     .story {
-      width: 200px;
+      width: 240px;
       background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
-      text-decoration: none;
+      text-align: center;
     }
     .story img {
       width: 100%;
       display: block;
     }
     .story-title {
-      margin: 12px;
       font-family: 'Roboto-Bold', sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       text-transform: uppercase;
+      margin: 12px 0;
       color: #000;
-      line-height: 1.2;
-      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+    .story-title:hover {
+      text-decoration: underline;
     }
 
-    /* --- Contact --- */
+    /* --- Contact Bar --- */
     .contact-bar {
       background: #000;
       text-align: center;
@@ -92,45 +94,47 @@
       font-size: 14px;
     }
 
-    /* --- Mobiil --- */
-    @media (max-width: 600px) {
+    /* --- Mobile --- */
+    @media (max-width: 768px) {
       .stories {
         flex-direction: column;
         align-items: center;
-        padding: 20px 10px;
-      }
-      .story {
-        width: 90%;
-        max-width: 300px;
+        gap: 30px;
+        padding: 20px 15px;
       }
     }
   </style>
 </head>
-
 <body>
-  <!-- Header bänner -->
+
+  <!-- Responsive header -->
   <header class="header">
-    <a href="index.html">
-      <img src="images/header4.png" alt="Pabah.com banner">
-    </a>
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/mob-header.png">
+      <img src="images/header4.png" alt="PABAH.COM banner">
+    </picture>
   </header>
 
-  <!-- Must triip headeri all (teksti pole) -->
-  <div class="header-divider"></div>
+  <!-- thin black divider -->
+  <div class="divider"></div>
 
-  <!-- Lugude thumbnailid -->
-  <main class="stories">
-    <a href="hypnos-and-cleers.html" class="story">
-      <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
-      <div class="story-title">Hypnos and Cleers</div>
-    </a>
-    <a href="chapters-of-self-help.html" class="story">
-      <img src="images/Palmisaar2.jpg" alt="Chapters of Self-Help">
-      <div class="story-title">Chapters of Self-Help</div>
-    </a>
-  </main>
+  <!-- Story thumbnails -->
+  <section class="stories">
+    <div class="story">
+      <a href="hypnos-and-cleers.html">
+        <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
+        <span class="story-title">HYPNOS AND CLEERS</span>
+      </a>
+    </div>
+    <div class="story">
+      <a href="chapters-of-self-help.html">
+        <img src="images/Palmisaar2.jpg" alt="Chapters of Self-Help">
+        <span class="story-title">CHAPTERS OF SELF-HELP</span>
+      </a>
+    </div>
+  </section>
 
-  <!-- Contact-riba -->
+  <!-- Contact footer -->
   <footer class="contact-bar">
     <a href="mailto:info@pabah.com">Contact: info@pabah.com</a>
   </footer>
