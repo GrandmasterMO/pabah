@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HYPNOS AND CLEERS</title>
-
   <style>
     @font-face {
       font-family: 'Roboto-Light';
@@ -49,31 +48,19 @@
       position: absolute;
       top: 20px;
       right: 20px;
+      display: flex;
+      align-items: center;
     }
 
     .search-box {
-      padding: 8px 12px;
+      padding: 8px 30px 8px 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 14px;
-    }
-
-    .search-box::placeholder {
-      color: #aaa;
-    }
-
-    .search-icon {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-
-    .black-bar {
-      background-color: #000;
-      height: 4px;
-      width: 100%;
+      background-image: url('images/search-icon.png');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px 16px;
     }
 
     .container {
@@ -120,6 +107,15 @@
       margin-bottom: 6px;
     }
 
+    img.article-image {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto 30px;
+      border-radius: 8px;
+    }
+
+    /* Mobile-specific adjustments */
     @media (max-width: 768px) {
       h1 {
         font-size: 24px;
@@ -128,21 +124,16 @@
       h2 {
         font-size: 20px;
       }
-      .search-container {
-        position: relative;
-        top: auto;
-        right: auto;
-        padding: 10px 15px 0;
-      }
-      .search-box {
-        width: 160px;
-        font-size: 14px;
-      }
-      .search-icon {
-        right: 15px;
-      }
-      .black-bar {
+      .article-image {
         display: none;
+      }
+      .container {
+        padding: 10px 15px;
+      }
+      .search-container {
+        position: static;
+        justify-content: flex-start;
+        margin: 10px 15px;
       }
     }
   </style>
@@ -150,19 +141,19 @@
 <body>
   <div class="header">
     <a href="index.html">
-      <img src="images/mob-header.png" alt="Pabah.com banner" />
+      <img src="images/header4.png" alt="Pabah.com banner" />
     </a>
     <div class="search-container">
       <input type="text" class="search-box" placeholder="Search stories..." />
-      <span class="search-icon">🔍</span>
     </div>
   </div>
 
-  <div class="black-bar"></div>
-
   <div class="container">
+    <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers" class="article-image">
+
     <h1>THE DIVISION OF HUMANKIND:<br>HYPNOS AND CLEERS</h1>
 
+    <!-- SIIN ALGAB PEAMINE TEKST -->
     <div class="section">
       <div class="section-title">HYPNOS</div>
       <p>The Hypnotizable (approximately 65–75% of the population)</p>
@@ -249,5 +240,6 @@
       <p class="italic">Sources: ScienceDirect, National Library of Medicine, The Asch Conformity Experiments.</p>
     </div>
   </div>
+
 </body>
 </html>
