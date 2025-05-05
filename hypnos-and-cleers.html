@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HYPNOS AND CLEERS</title>
-
   <style>
     @font-face {
       font-family: 'Roboto-Light';
@@ -70,12 +69,6 @@
       pointer-events: none;
     }
 
-    .black-bar {
-      width: 100%;
-      height: 5px;
-      background-color: black;
-    }
-
     .container {
       max-width: 800px;
       margin: 40px auto;
@@ -120,7 +113,7 @@
       margin-bottom: 6px;
     }
 
-    img.article-image {
+    .article-image {
       width: 100%;
       max-width: 800px;
       display: block;
@@ -128,19 +121,13 @@
       border-radius: 8px;
     }
 
-    /* --- Mobile-specific adjustments --- */
+    .divider {
+      height: 4px;
+      background: #000;
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
-      .header img.desktop-header {
-        display: none;
-      }
-
-      .header img.mobile-header {
-        display: block;
-        width: 100vw;
-        max-width: 100vw;
-        margin: 0;
-      }
-
       h1 {
         font-size: 24px;
         text-align: left;
@@ -150,22 +137,16 @@
         font-size: 20px;
       }
 
-      .article-image {
-        width: 100vw;
-        max-width: 100vw;
-        margin: 0;
-        border-radius: 0;
-      }
-
       .container {
         padding: 10px 15px;
       }
 
       .search-container {
         position: static;
-        padding: 10px 15px;
+        margin: 10px;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
       }
 
       .search-box {
@@ -175,13 +156,14 @@
       }
 
       .search-icon {
-        position: absolute;
-        right: 25px;
+        right: 20px;
       }
-    }
 
-    @media (min-width: 769px) {
-      .header img.mobile-header {
+      .article-image {
+        display: none;
+      }
+
+      .divider {
         display: none;
       }
     }
@@ -190,21 +172,20 @@
 <body>
   <div class="header">
     <a href="index.html">
-      <img src="images/header4.png" alt="Pabah.com banner" class="desktop-header" />
-      <img src="images/mob-header.png" alt="Pabah.com mobile banner" class="mobile-header" />
+      <picture>
+        <source srcset="images/mob-header.png" media="(max-width: 768px)">
+        <img src="images/header4.png" alt="Pabah.com banner" />
+      </picture>
     </a>
-    <div class="search-container">
-      <input type="text" class="search-box" placeholder="Search stories..." />
-      <span class="search-icon">🔍</span>
-    </div>
   </div>
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search stories..." />
+    <span class="search-icon">🔍</span>
+  </div>
+  <div class="divider"></div>
 
-  <div class="black-bar"></div>
-
-  <!-- CONTENT STARTS HERE -->
   <div class="container">
-    <!-- Content here (same as in previous version) -->
+    <!-- TEKSTI SISU (nt h1, section-title, p, ul/li jne) -->
   </div>
-
 </body>
 </html>
