@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INFORMATION</title>
+
+  <style>
+    /* --- Laeme Roboto fondid --- */
+    @font-face {
+      font-family: 'Roboto-Regular';
+      src: url('fonts/Roboto-Regular.ttf') format('truetype');
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: 'Roboto-Bold';
+      src: url('fonts/Roboto-Bold.ttf') format('truetype');
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      font-family: 'Roboto-Regular', sans-serif;
+    }
+
+    /* Header */
+    .header {
+      position: relative;
+      width: 100%;
+    }
+    .header a {
+      display: block;
+    }
+    .header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Õhuke must triip headeri alla */
+    .header-divider {
+      height: 4px;
+      background: #000;
+    }
+
+    /* Lugude plokkide konteiner */
+    .stories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .story {
+      width: 200px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .story img {
+      width: 100%;
+      display: block;
+    }
+    .story-title {
+      margin: 15px;
+      font-family: 'Roboto-Bold', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* Kontaktriba */
+    .contact-bar {
+      background: #000;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .contact-bar a {
+      font-family: 'Roboto-Regular', sans-serif;
+      color: #E5FF00;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: none;
+    }
+
+    /* --- Mobiil --- */
+    @media (max-width: 600px) {
+      .stories {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+      }
+      .story {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header koos klikitava bänneriga -->
+  <header class="header">
+    <a href="index.html">
+      <img src="images/header4.png" alt="Pabah.com banner">
+    </a>
+  </header>
+
+  <!-- Must triip -->
+  <div class="header-divider"></div>
+
+  <!-- Lugude galerii -->
+  <section class="stories">
+    <a href="hypnos-and-cleers.html" class="story">
+      <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
+      <div class="story-title">Hypnos and Cleers</div>
+    </a>
+    <a href="chapters-of-self-help.html" class="story">
+      <img src="images/Palmisaar2.jpg" alt="Chapters of Self-Help">
+      <div class="story-title">Chapters of Self-Help</div>
+    </a>
+  </section>
+
+  <!-- Kontakt -->
+  <footer class="contact-bar">
+    <a href="mailto:info@pabah.com">Contact: info@pabah.com</a>
+  </footer>
+
+</body>
+</html>
