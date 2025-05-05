@@ -35,31 +35,38 @@
 
     .header {
       width: 100%;
-      display: block;
       position: relative;
     }
 
-    .header img {
+    .header img.desktop {
       width: 100%;
       display: block;
+    }
+
+    .header img.mobile {
+      display: none;
+      width: 100%;
+    }
+
+    .black-bar {
+      height: 4px;
+      background: #000;
+      width: 100%;
     }
 
     .search-container {
       position: absolute;
       top: 20px;
       right: 20px;
-      display: flex;
-      align-items: center;
     }
 
     .search-box {
-      padding: 8px 30px 8px 12px;
+      padding: 8px 12px;
+      padding-right: 30px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 14px;
-      background-image: url('images/search-icon.png');
-      background-repeat: no-repeat;
-      background-position: right 10px center;
+      background: #fff url('images/search-icon.png') no-repeat right 10px center;
       background-size: 16px 16px;
     }
 
@@ -74,12 +81,6 @@
       font-size: 32px;
       margin-top: 20px;
       margin-bottom: 10px;
-    }
-
-    h2 {
-      font-family: 'Roboto-Medium', sans-serif;
-      font-size: 20px;
-      margin-top: 30px;
     }
 
     .section-title {
@@ -115,25 +116,29 @@
       border-radius: 8px;
     }
 
-    /* Mobile-specific adjustments */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 24px;
-        text-align: left;
-      }
-      h2 {
-        font-size: 20px;
-      }
-      .article-image {
+      .header img.desktop {
         display: none;
       }
-      .container {
-        padding: 10px 15px;
+      .header img.mobile {
+        display: block;
+      }
+      .black-bar {
+        display: none;
       }
       .search-container {
         position: static;
-        justify-content: flex-start;
         margin: 10px 15px;
+      }
+      .search-box {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      img.article-image {
+        display: none;
+      }
+      h1 {
+        font-size: 24px;
       }
     }
   </style>
@@ -141,27 +146,25 @@
 <body>
   <div class="header">
     <a href="index.html">
-      <img src="images/header4.png" alt="Pabah.com banner" />
+      <img src="images/header4.png" alt="Pabah.com banner" class="desktop" />
+      <img src="images/mob-header.png" alt="Pabah.com banner mobile" class="mobile" />
     </a>
     <div class="search-container">
       <input type="text" class="search-box" placeholder="Search stories..." />
     </div>
   </div>
-
+  <div class="black-bar"></div>
   <div class="container">
-    <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers" class="article-image">
-
+    <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers" class="article-image" />
     <h1>THE DIVISION OF HUMANKIND:<br>HYPNOS AND CLEERS</h1>
-
-    <!-- SIIN ALGAB PEAMINE TEKST -->
     <div class="section">
       <div class="section-title">HYPNOS</div>
       <p>The Hypnotizable (approximately 65–75% of the population)</p>
-      <p><span class="bold">Origin:</span> The term derives from the Latin « hypnos » (sleep) and the suffix « -oid » (form, kind, type).</p>
+      <p><span class="bold">Origin:</span> The term derives from the Latin «hypnos» (sleep) and the suffix «-oid» (form, kind, type).</p>
       <p><span class="bold">Brief Description:</span> Hypnoids are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement.</p>
       <p><span class="bold">Characteristics:</span></p>
       <ul>
-        <li>People live in a mechanical reaction pattern: feeling ➝ media ➝ reaction ➝ forgetting.</li>
+        <li>People live in a mechanical reaction pattern: feeling → media → reaction → forgetting.</li>
         <li>Constantly consume information, but with minimal analysis.</li>
         <li>Language is loaded with system-internal thoughts and slogans, yet empty of inner reflection.</li>
         <li>They see, but do not observe. They hear, but do not listen.</li>
@@ -171,13 +174,11 @@
         <li>They feed on ideological hyperreality.</li>
         <li>They maintain the stability of the system, even when it is hollow inside.</li>
       </ul>
-
       <div class="section-title">SUBTYPES OF HYPNOS</div>
       <ul>
         <li>Hyper-Hypnos (10–15%) – highly susceptible to hypnosis.</li>
         <li>Drifting Hypnos (approximately 45–60%) – moderately susceptible to hypnosis.</li>
       </ul>
-
       <div class="section-title">HYPER-HYPNOS</div>
       <p><span class="bold">Brief Description:</span> Hyper-Hypnoids are individuals who are extremely vulnerable to mass hypnosis. They respond rapidly and completely to collective influences, without doubt or inner resistance. They are the most effective carriers and amplifiers of mass hypnosis.</p>
       <p><span class="bold">Characteristics:</span></p>
@@ -190,21 +191,19 @@
       <p><span class="bold">Social Role:</span></p>
       <ul>
         <li>The best tool and expression of deliberate mass hypnosis.</li>
-        <li>They serve as the « guardians » of the collective, protecting the system from doubt.</li>
+        <li>They serve as the «guardians» of the collective, protecting the system from doubt.</li>
       </ul>
-
       <div class="section-title">DRIFTING HYPNOS</div>
       <p><span class="bold">Brief Description:</span> They sense that something is wrong but are unable to exit the hypnosis. When they begin to awaken, they often fall back under the influence of media and authority figures.</p>
-      <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.<br>They require an inner or external « call » to awaken.</p>
+      <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.<br>They require an inner or external «call» to awaken.</p>
       <p><span class="bold">Social Role:</span></p>
       <ul>
         <li>Will-less followers, controlled through fear.</li>
         <li>They understand that something is wrong, but the fear of standing out keeps them silent.</li>
       </ul>
-
       <div class="section-title">CLEERS</div>
       <p>The Non-Hypnotizable (15–25% of the population)</p>
-      <p><span class="bold">Origin:</span><br>Derived from the Latin word « clarus » (« clear », « transparent »).</p>
+      <p><span class="bold">Origin:</span> Derived from the Latin word «clarus» («clear», «transparent»).</p>
       <p><span class="bold">Brief Description:</span> Cleers are not affected by the hypnotron and do not drift in a mental fog — they live in clarity of consciousness. Their presence is quiet, yet powerful.</p>
       <p><span class="bold">Characteristics:</span></p>
       <ul>
@@ -218,8 +217,7 @@
         <li>They awaken only those who are ready.</li>
       </ul>
       <p class="italic">(This typology does not offer absolute definitions but rather a framework for understanding the different layers of human psychology and consciousness in the era of mass phenomena.)</p>
-
-      <h2>SCIENTIFIC BACKGROUND</h2>
+      <div class="section-title">SCIENTIFIC BACKGROUND</div>
       <p>Scientific research shows that human susceptibility to hypnosis is distributed approximately as follows:</p>
       <ul>
         <li>10–15% of people are highly susceptible to hypnosis;</li>
@@ -227,19 +225,17 @@
         <li>15–20% are very resistant or completely unsusceptible to hypnosis.</li>
       </ul>
       <p>Hypnotizability is a relatively stable personality trait that can remain unchanged for decades. It is measured using specialized tests such as the Stanford or Harvard Hypnotic Susceptibility Scales.</p>
-
-      <h2>PSYCHOLOGICAL MASS HYPNOSIS</h2>
+      <div class="section-title">PSYCHOLOGICAL MASS HYPNOSIS</div>
       <p><span class="bold">Signs of Mass Hypnosis:</span></p>
       <ul>
         <li>People do not think independently but blindly believe everything told to them by the media, authorities, government, or officials.</li>
         <li>Behavior, thoughts, and even identity are strongly influenced by collective norms.</li>
-        <li>News, social media, and advertisements « program » people’s mindsets.</li>
+        <li>News, social media, and advertisements «program» people’s mindsets.</li>
         <li>Group pressure shapes individual decisions and perceptions—people follow the group’s opinion, even when it is clearly false.</li>
-        <li>Independent thinking is replaced by a collective « truth ».</li>
+        <li>Independent thinking is replaced by a collective «truth».</li>
       </ul>
       <p class="italic">Sources: ScienceDirect, National Library of Medicine, The Asch Conformity Experiments.</p>
     </div>
   </div>
-
 </body>
 </html>
