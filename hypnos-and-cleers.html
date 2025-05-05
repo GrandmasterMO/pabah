@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hypnos and Cleers</title>
+  <title>HYPNOS AND CLEERS</title>
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
+  <!-- Fonts -->
   <style>
     @font-face {
-      font-family: 'Roboto';
+      font-family: 'RobotoLight';
       src: url('fonts/Roboto-Light.ttf') format('truetype');
-      font-weight: 300;
     }
-
     @font-face {
-      font-family: 'Roboto';
-      src: url('fonts/Roboto-Regular.ttf') format('truetype');
-      font-weight: 400;
-    }
-
-    @font-face {
-      font-family: 'Roboto';
-      src: url('fonts/Roboto-Medium.ttf') format('truetype');
-      font-weight: 500;
-    }
-
-    @font-face {
-      font-family: 'Roboto';
+      font-family: 'RobotoBold';
       src: url('fonts/Roboto-Bold.ttf') format('truetype');
-      font-weight: 700;
     }
-
     @font-face {
-      font-family: 'Roboto';
+      font-family: 'RobotoMedium';
+      src: url('fonts/Roboto-Medium.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'RobotoItalic';
       src: url('fonts/Roboto-LightItalic.ttf') format('truetype');
-      font-style: italic;
-      font-weight: 300;
     }
 
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
       background-color: #fff;
-      color: #000;
+      font-family: 'RobotoLight', sans-serif;
+      line-height: 1.6;
     }
 
     .header-image {
@@ -58,70 +44,81 @@
     .search-container {
       position: absolute;
       top: 20px;
-      right: 30px;
+      right: 20px;
     }
 
     .search-box {
-      padding: 8px 12px;
-      font-size: 16px;
+      padding: 10px 35px 10px 10px;
+      font-size: 14px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      width: 240px;
-      background: #fff url('images/search-icon.png') no-repeat right 10px center;
-      background-size: 20px;
+      background: url('images/search-icon.png') no-repeat right 10px center;
+      background-size: 16px;
     }
 
     .content {
-      max-width: 720px;
+      max-width: 750px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     h1 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 20px;
+      font-size: 30px;
+      font-family: 'RobotoBold', sans-serif;
+      margin-bottom: 10px;
     }
 
     h2 {
       font-size: 20px;
-      font-weight: 500;
+      font-family: 'RobotoMedium', sans-serif;
       margin-top: 30px;
       margin-bottom: 10px;
     }
 
     p {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
     }
 
     .bold {
-      font-weight: 700;
-    }
-
-    ul {
-      margin: 0 0 12px 20px;
-      padding: 0;
-    }
-
-    ul li {
-      margin-bottom: 6px;
+      font-family: 'RobotoMedium', sans-serif;
     }
 
     .italic {
-      font-style: italic;
-      font-weight: 300;
+      font-family: 'RobotoItalic', sans-serif;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .logo-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
 
-  <img src="images/header4.png" alt="Header Banner" class="header-image" />
+  <!-- Header + Search box + Clickable logo -->
+  <a class="logo-link" href="index.html">
+    <img src="images/header4.png" alt="Header Banner" class="header-image" />
+  </a>
 
   <div class="search-container">
-    <input type="text" class="search-box" placeholder="Search stories...">
+    <input class="search-box" type="text" placeholder="Search stories...">
   </div>
 
+  <!-- Page Content -->
   <div class="content">
+    <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers" style="width: 100%; border-radius: 10px; margin-bottom: 30px;">
+
     <h1>THE DIVISION OF HUMANKIND:<br>HYPNOS AND CLEERS</h1>
 
     <h2>HYPNOS</h2>
@@ -130,7 +127,7 @@
     <p><span class="bold">Brief Description:</span> Hypnoids are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement.</p>
     <p><span class="bold">Characteristics:</span></p>
     <ul>
-      <li>People live in a mechanical reaction pattern: feeling → media → reaction → forgetting.</li>
+      <li>People live in a mechanical reaction pattern: feeling ➔ media ➔ reaction ➔ forgetting.</li>
       <li>Constantly consume information, but with minimal analysis.</li>
       <li>Language is loaded with system-internal thoughts and slogans, yet empty of inner reflection.</li>
       <li>They see, but do not observe. They hear, but do not listen.</li>
@@ -164,8 +161,8 @@
 
     <h2>DRIFTING HYPNOS</h2>
     <p><span class="bold">Brief Description:</span> They sense that something is wrong but are unable to exit the hypnosis. When they begin to awaken, they often fall back under the influence of media and authority figures.</p>
-    <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.</p>
-    <p>They require an inner or external « call » to awaken.</p>
+    <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.<br>
+    They require an inner or external « call » to awaken.</p>
     <p><span class="bold">Social Role:</span></p>
     <ul>
       <li>Will-less followers, controlled through fear.</li>
@@ -174,7 +171,7 @@
 
     <h2>CLEERS</h2>
     <p>The Non-Hypnotizable (15–25% of the population)</p>
-    <p><span class="bold">Origin:</span> Derived from the Latin word « clarus » (« clear », « transparent »).</p>
+    <p><span class="bold">Origin:</span><br>Derived from the Latin word « clarus » (« clear », « transparent »).</p>
     <p><span class="bold">Brief Description:</span> Cleers are not affected by the hypnotron and do not drift in a mental fog — they live in clarity of consciousness. Their presence is quiet, yet powerful.</p>
     <p><span class="bold">Characteristics:</span></p>
     <ul>
@@ -211,6 +208,5 @@
 
     <p class="italic">Sources: ScienceDirect, National Library of Medicine, The Asch Conformity Experiments.</p>
   </div>
-
 </body>
 </html>
