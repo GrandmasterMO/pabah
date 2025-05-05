@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HYPNOS AND CLEERS</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <style>
     @font-face {
       font-family: 'Roboto-Light';
@@ -36,6 +37,7 @@
     .header {
       width: 100%;
       position: relative;
+      overflow: hidden;
     }
 
     .header img.desktop {
@@ -52,22 +54,6 @@
       height: 4px;
       background: #000;
       width: 100%;
-    }
-
-    .search-container {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .search-box {
-      padding: 8px 12px;
-      padding-right: 30px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-      background: #fff url('images/search-icon.png') no-repeat right 10px center;
-      background-size: 16px 16px;
     }
 
     .container {
@@ -96,6 +82,7 @@
 
     .italic {
       font-family: 'Roboto-LightItalic', sans-serif;
+      margin-top: 20px;
     }
 
     ul {
@@ -108,14 +95,7 @@
       margin-bottom: 6px;
     }
 
-    img.article-image {
-      width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 0 auto 30px;
-      border-radius: 8px;
-    }
-
+    /* Mobile-specific adjustments */
     @media (max-width: 768px) {
       .header img.desktop {
         display: none;
@@ -126,16 +106,8 @@
       .black-bar {
         display: none;
       }
-      .search-container {
-        position: static;
-        margin: 10px 15px;
-      }
-      .search-box {
-        width: 100%;
-        box-sizing: border-box;
-      }
-      img.article-image {
-        display: none;
+      .container {
+        padding: 10px 15px;
       }
       h1 {
         font-size: 24px;
@@ -147,15 +119,12 @@
   <div class="header">
     <a href="index.html">
       <img src="images/header4.png" alt="Pabah.com banner" class="desktop" />
-      <img src="images/mob-header.png" alt="Pabah.com banner mobile" class="mobile" />
+      <img src="images/mob-header.png" alt="Pabah.com mobile banner" class="mobile" />
     </a>
-    <div class="search-container">
-      <input type="text" class="search-box" placeholder="Search stories..." />
-    </div>
   </div>
   <div class="black-bar"></div>
+
   <div class="container">
-    <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers" class="article-image" />
     <h1>THE DIVISION OF HUMANKIND:<br>HYPNOS AND CLEERS</h1>
     <div class="section">
       <div class="section-title">HYPNOS</div>
@@ -174,11 +143,13 @@
         <li>They feed on ideological hyperreality.</li>
         <li>They maintain the stability of the system, even when it is hollow inside.</li>
       </ul>
+
       <div class="section-title">SUBTYPES OF HYPNOS</div>
       <ul>
         <li>Hyper-Hypnos (10–15%) – highly susceptible to hypnosis.</li>
         <li>Drifting Hypnos (approximately 45–60%) – moderately susceptible to hypnosis.</li>
       </ul>
+
       <div class="section-title">HYPER-HYPNOS</div>
       <p><span class="bold">Brief Description:</span> Hyper-Hypnoids are individuals who are extremely vulnerable to mass hypnosis. They respond rapidly and completely to collective influences, without doubt or inner resistance. They are the most effective carriers and amplifiers of mass hypnosis.</p>
       <p><span class="bold">Characteristics:</span></p>
@@ -193,6 +164,7 @@
         <li>The best tool and expression of deliberate mass hypnosis.</li>
         <li>They serve as the «guardians» of the collective, protecting the system from doubt.</li>
       </ul>
+
       <div class="section-title">DRIFTING HYPNOS</div>
       <p><span class="bold">Brief Description:</span> They sense that something is wrong but are unable to exit the hypnosis. When they begin to awaken, they often fall back under the influence of media and authority figures.</p>
       <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.<br>They require an inner or external «call» to awaken.</p>
@@ -201,6 +173,7 @@
         <li>Will-less followers, controlled through fear.</li>
         <li>They understand that something is wrong, but the fear of standing out keeps them silent.</li>
       </ul>
+
       <div class="section-title">CLEERS</div>
       <p>The Non-Hypnotizable (15–25% of the population)</p>
       <p><span class="bold">Origin:</span> Derived from the Latin word «clarus» («clear», «transparent»).</p>
@@ -215,24 +188,6 @@
       <ul>
         <li>Their presence affects the space—they do not persuade, they resonate.</li>
         <li>They awaken only those who are ready.</li>
-      </ul>
-      <p class="italic">(This typology does not offer absolute definitions but rather a framework for understanding the different layers of human psychology and consciousness in the era of mass phenomena.)</p>
-      <div class="section-title">SCIENTIFIC BACKGROUND</div>
-      <p>Scientific research shows that human susceptibility to hypnosis is distributed approximately as follows:</p>
-      <ul>
-        <li>10–15% of people are highly susceptible to hypnosis;</li>
-        <li>65–75% fall into the category of moderate hypnotizability;</li>
-        <li>15–20% are very resistant or completely unsusceptible to hypnosis.</li>
-      </ul>
-      <p>Hypnotizability is a relatively stable personality trait that can remain unchanged for decades. It is measured using specialized tests such as the Stanford or Harvard Hypnotic Susceptibility Scales.</p>
-      <div class="section-title">PSYCHOLOGICAL MASS HYPNOSIS</div>
-      <p><span class="bold">Signs of Mass Hypnosis:</span></p>
-      <ul>
-        <li>People do not think independently but blindly believe everything told to them by the media, authorities, government, or officials.</li>
-        <li>Behavior, thoughts, and even identity are strongly influenced by collective norms.</li>
-        <li>News, social media, and advertisements «program» people’s mindsets.</li>
-        <li>Group pressure shapes individual decisions and perceptions—people follow the group’s opinion, even when it is clearly false.</li>
-        <li>Independent thinking is replaced by a collective «truth».</li>
       </ul>
       <p class="italic">Sources: ScienceDirect, National Library of Medicine, The Asch Conformity Experiments.</p>
     </div>
