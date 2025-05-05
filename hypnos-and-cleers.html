@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CHAPTERS OF SELF-HELP</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYPNOS AND CLEERS</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <style>
-    /* --- Fonts --- */
     @font-face {
-      font-family: 'Roboto-Regular';
-      src: url('fonts/Roboto-Regular.ttf') format('truetype');
-      font-weight: normal;
+      font-family: 'Roboto-Light';
+      src: url('fonts/Roboto-Light.ttf') format('truetype');
     }
     @font-face {
       font-family: 'Roboto-Bold';
       src: url('fonts/Roboto-Bold.ttf') format('truetype');
       font-weight: bold;
+    }
+    @font-face {
+      font-family: 'Roboto-Medium';
+      src: url('fonts/Roboto-Medium.ttf') format('truetype');
     }
     @font-face {
       font-family: 'Roboto-LightItalic';
@@ -29,137 +28,169 @@
     body {
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #000;
-      font-family: 'Roboto-Regular', sans-serif;
+      font-family: 'Roboto-Light', sans-serif;
       line-height: 1.6;
+      background-color: #fff;
+      color: #000;
     }
 
-    /* --- Header & Divider --- */
     .header {
+      width: 100%;
       position: relative;
-      width: 100%;
+      overflow: hidden;
     }
-    .header a {
+
+    .header img.desktop {
+      width: 100%;
       display: block;
     }
-    .header img {
+
+    .header img.mobile {
+      display: none;
       width: 100%;
-      height: auto;
-      display: block;
     }
-    .divider {
+
+    .black-bar {
       height: 4px;
       background: #000;
+      width: 100%;
     }
 
-    /* --- Container --- */
     .container {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    /* --- Titles --- */
     h1 {
       font-family: 'Roboto-Bold', sans-serif;
       font-size: 32px;
-      text-transform: uppercase;
-      margin: 20px 0 10px;
-    }
-    h2 {
-      font-family: 'Roboto-Bold', sans-serif;
-      font-size: 16px;           /* same size as body */
-      text-transform: uppercase; /* all caps */
-      margin: 20px 0 10px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
-    /* --- Bold & Italic Spans --- */
-    .bold {
-      font-family: 'Roboto-Bold', sans-serif;
+    .section-title {
+      font-family: 'Roboto-Medium', sans-serif;
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
+
+    .bold {
+      font-family: 'Roboto-Medium', sans-serif;
+    }
+
     .italic {
       font-family: 'Roboto-LightItalic', sans-serif;
+      margin-top: 20px;
     }
 
-    /* --- Lists --- */
     ul {
       padding-left: 20px;
-      margin: 0 0 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
+
     li {
       margin-bottom: 6px;
     }
 
-    /* --- Footer --- */
-    .contact-bar {
-      background: #000;
-      text-align: center;
-      padding: 12px 0;
-    }
-    .contact-bar a {
-      font-family: 'Roboto-Regular', sans-serif;
-      color: #E5FF00;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    /* --- Mobile Adjustments --- */
+    /* Mobile-specific adjustments */
     @media (max-width: 768px) {
-      .header img {
-        content: url('images/mob-header.png');
+      .header img.desktop {
+        display: none;
+      }
+      .header img.mobile {
+        display: block;
+      }
+      .black-bar {
+        display: none;
       }
       .container {
         padding: 10px 15px;
+      }
+      h1 {
+        font-size: 24px;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- Header linking back home -->
-  <header class="header">
+  <div class="header">
     <a href="index.html">
-      <img src="images/header4.png" alt="Pabah.com banner" />
+      <img src="images/header4.png" alt="Pabah.com banner" class="desktop" />
+      <img src="images/mob-header.png" alt="Pabah.com mobile banner" class="mobile" />
     </a>
-  </header>
+  </div>
+  <div class="black-bar"></div>
 
-  <!-- Thin black divider -->
-  <div class="divider"></div>
+  <div class="container">
+    <h1>THE DIVISION OF HUMANKIND:<br>HYPNOS AND CLEERS</h1>
+    <div class="section">
+      <div class="section-title">HYPNOS</div>
+      <p>The Hypnotizable (approximately 65–75% of the population)</p>
+      <p><span class="bold">Origin:</span> The term derives from the Latin «hypnos» (sleep) and the suffix «-oid» (form, kind, type).</p>
+      <p><span class="bold">Brief Description:</span> Hypnoids are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement.</p>
+      <p><span class="bold">Characteristics:</span></p>
+      <ul>
+        <li>People live in a mechanical reaction pattern: feeling → media → reaction → forgetting.</li>
+        <li>Constantly consume information, but with minimal analysis.</li>
+        <li>Language is loaded with system-internal thoughts and slogans, yet empty of inner reflection.</li>
+        <li>They see, but do not observe. They hear, but do not listen.</li>
+      </ul>
+      <p><span class="bold">Social Role:</span></p>
+      <ul>
+        <li>They feed on ideological hyperreality.</li>
+        <li>They maintain the stability of the system, even when it is hollow inside.</li>
+      </ul>
 
-  <main class="container">
-    <h1>CHAPTERS OF SELF-HELP</h1>
+      <div class="section-title">SUBTYPES OF HYPNOS</div>
+      <ul>
+        <li>Hyper-Hypnos (10–15%) – highly susceptible to hypnosis.</li>
+        <li>Drifting Hypnos (approximately 45–60%) – moderately susceptible to hypnosis.</li>
+      </ul>
 
-    <h2>BREAKING FREE FROM SELF-DESTRUCTIVE EMOTIONAL PROGRAMS</h2>
-    <p>Human subconscious is filled with programs that steer our behavior and choices throughout life.</p>
-    <p>These programs originate from parents, childhood experiences and other influences we collect over time.</p>
-    <p>Some of them are positive, but most are negative. We may be aware of a few, yet the majority guide us without our conscious knowledge.</p>
-    <p>These hidden programs drive how we interact and react, pushing destructive energy or behaviors.</p>
-    <p>The first step is to uncover and acknowledge these programs.</p>
-    <p>Once recognized, we can begin to cleanse our subconscious and overwrite the negative programs.</p>
-    <p>We cannot simply delete them—doing so leaves a void—so we must replace each with a new positive program.</p>
+      <div class="section-title">HYPER-HYPNOS</div>
+      <p><span class="bold">Brief Description:</span> Hyper-Hypnoids are individuals who are extremely vulnerable to mass hypnosis. They respond rapidly and completely to collective influences, without doubt or inner resistance. They are the most effective carriers and amplifiers of mass hypnosis.</p>
+      <p><span class="bold">Characteristics:</span></p>
+      <ul>
+        <li>Tendency toward fanaticism and blind obedience.</li>
+        <li>Deep identification with the official narrative.</li>
+        <li>Inclined to repeat, spread, and reinforce systemic messages.</li>
+        <li>Emotional reactions toward those who think differently—often aggressive or hostile.</li>
+      </ul>
+      <p><span class="bold">Social Role:</span></p>
+      <ul>
+        <li>The best tool and expression of deliberate mass hypnosis.</li>
+        <li>They serve as the «guardians» of the collective, protecting the system from doubt.</li>
+      </ul>
 
-    <p>For example, if someone’s words or actions don’t match your expectations, it triggers an emotion of offense.</p>
-    <p>Each person is like a radio station, continuously transmitting energy through thoughts, words, and emotions to everyone in their field.</p>
-    <p>This energy is strongest close to the individual, enveloping them.</p>
-    <p>Offensive energy is negative and destructive, causing ill-feeling, breakdown of organic matter, and even disease.</p>
-    <p>The goal is to overwrite the negative offense program.</p>
-    <p>If someone’s behavior disappoints you, consciously choose understanding instead of offense.</p>
-    <p>Realize they act under their own negative subconscious programming—there is no deliberate malice.</p>
-    <p>Now aware, you can choose a reaction that heals your well-being and body.</p>
+      <div class="section-title">DRIFTING HYPNOS</div>
+      <p><span class="bold">Brief Description:</span> They sense that something is wrong but are unable to exit the hypnosis. When they begin to awaken, they often fall back under the influence of media and authority figures.</p>
+      <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.<br>They require an inner or external «call» to awaken.</p>
+      <p><span class="bold">Social Role:</span></p>
+      <ul>
+        <li>Will-less followers, controlled through fear.</li>
+        <li>They understand that something is wrong, but the fear of standing out keeps them silent.</li>
+      </ul>
 
-    <p>We are all spiritual children. Treat adults as you would a small child:</p>
-    <p>If a toddler acts unpredictably, you don’t get angry. You smile, forgive, and respond with love.</p>
-    <p>Apply the same approach to adults.</p>
-    <p>Negative energy repels, while positive energy attracts.</p>
-    <p>If you dwell in negativity, others sense it and subconsciously keep their distance.</p>
-    <p>When you radiate positivity, people naturally gravitate toward you.</p>
-    <p>Despair and hopelessness push people away; joy of life pulls them in.</p>
-  </main>
-
-  <!-- Contact footer -->
-  <footer class="contact-bar">
-    <a href="mailto:info@pabah.com">Contact: info@pabah.com</a>
-  </footer>
+      <div class="section-title">CLEERS</div>
+      <p>The Non-Hypnotizable (15–25% of the population)</p>
+      <p><span class="bold">Origin:</span> Derived from the Latin word «clarus» («clear», «transparent»).</p>
+      <p><span class="bold">Brief Description:</span> Cleers are not affected by the hypnotron and do not drift in a mental fog — they live in clarity of consciousness. Their presence is quiet, yet powerful.</p>
+      <p><span class="bold">Characteristics:</span></p>
+      <ul>
+        <li>They know how to move through both invisibility and visibility.</li>
+        <li>Aware of systems, but do not identify with them.</li>
+        <li>Choose silence more often than shouting.</li>
+      </ul>
+      <p><span class="bold">Social Role:</span></p>
+      <ul>
+        <li>Their presence affects the space—they do not persuade, they resonate.</li>
+        <li>They awaken only those who are ready.</li>
+      </ul>
+      <p class="italic">Sources: ScienceDirect, National Library of Medicine, The Asch Conformity Experiments.</p>
+    </div>
+  </div>
 </body>
 </html>
