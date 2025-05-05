@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chapters of Self-Help</title>
+  <title>CHAPTERS OF SELF-HELP</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
-    /* --- Fonts --- */
+    /* --- Font faces --- */
     @font-face {
       font-family: 'Roboto-Regular';
       src: url('fonts/Roboto-Regular.ttf') format('truetype');
@@ -20,17 +20,23 @@
       src: url('fonts/Roboto-Bold.ttf') format('truetype');
       font-weight: bold;
     }
+    @font-face {
+      font-family: 'Roboto-LightItalic';
+      src: url('fonts/Roboto-LightItalic.ttf') format('truetype');
+      font-style: italic;
+    }
 
+    /* --- Base styles --- */
     body {
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #000;
       font-family: 'Roboto-Regular', sans-serif;
       line-height: 1.6;
+      background: #fff;
+      color: #000;
     }
 
-    /* --- Header --- */
+    /* --- Header/banner --- */
     .header {
       position: relative;
       width: 100%;
@@ -38,37 +44,56 @@
     .header a {
       display: block;
     }
-    /* picture element will pick the right banner */
     .header img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .header-divider {
+    /* --- Thin divider beneath header --- */
+    .divider {
       height: 4px;
       background: #000;
     }
 
+    /* --- Main content wrapper --- */
     .container {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    /* Title */
+    /* --- Page title --- */
     h1 {
       font-family: 'Roboto-Bold', sans-serif;
       font-size: 32px;
-      margin-bottom: 24px;
       text-transform: uppercase;
+      margin: 20px 0 10px;
     }
 
-    p {
-      margin-bottom: 16px;
+    /* --- Subtitle: uppercase, bold, same size as body --- */
+    h2 {
+      font-family: 'Roboto-Bold', sans-serif;
+      font-size: 16px;           /* matches body text size */
+      text-transform: uppercase;
+      margin: 20px 0 10px;
     }
 
-    /* Contact bar */
+    /* --- Italics for the closing note --- */
+    .italic {
+      font-family: 'Roboto-LightItalic', sans-serif;
+    }
+
+    /* --- Lists styling --- */
+    ul {
+      padding-left: 20px;
+      margin: 0 0 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* --- Footer/contact bar --- */
     .contact-bar {
       background: #000;
       text-align: center;
@@ -81,89 +106,63 @@
       font-size: 14px;
     }
 
-    /* --- Mobile adjustments --- */
+    /* --- Mobile header swap (if you have mob-header.png) --- */
     @media (max-width: 768px) {
+      .header img {
+        content: url('images/mob-header.png');
+      }
       .container {
         padding: 10px 15px;
       }
-      h1 {
-        font-size: 24px;
-      }
-      /* hide mobile header divider? keep if you like */
     }
   </style>
 </head>
 <body>
 
-  <!-- Responsive banner -->
+  <!-- Clickable header returns home -->
   <header class="header">
-    <picture>
-      <source media="(max-width: 768px)" srcset="images/mob-header.png">
-      <img src="images/header4.png" alt="PABAH.COM banner">
-    </picture>
+    <a href="index.html">
+      <img src="images/header4.png" alt="PABAH.COM banner" />
+    </a>
   </header>
 
-  <!-- thin black line -->
-  <div class="header-divider"></div>
+  <!-- Thin black divider -->
+  <div class="divider"></div>
 
-  <!-- Article content -->
   <main class="container">
     <h1>CHAPTERS OF SELF-HELP</h1>
+    <h2>BREAKING FREE FROM SELF-DESTRUCTIVE EMOTIONAL PROGRAMS</h2>
 
-    <p><strong>Breaking free from self-destructive emotional programs</strong></p>
-
-    <p>The human subconscious is full of programs that direct behavior and choices in life.</p>
-
-    <p>They are programs collected from father, mother, childhood, and elsewhere throughout life.</p>
-
-    <p>Some of them are positive, but the majority are usually negative. We are aware of some, but most guide us without our knowledge.</p>
-
-    <p>It is these hidden subconscious programs that direct a person’s behavior and choices when interacting with others or reacting to situations.</p>
-
+    <p>Human subconscious is filled with programs that steer our behavior and choices throughout life.</p>
+    <p>These programs originate from parents, childhood experiences, and other influences we collect over time.</p>
+    <p>Some of them are positive, but the majority are usually negative. We are aware of some, yet most guide us without our conscious knowledge.</p>
+    <p>These hidden subconscious programs direct a person’s behavior and choices when interacting with others or reacting to situations.</p>
     <p>Negative programs lead to self-destructive behavior or the generation of self-destructive energy.</p>
-
     <p>The first step is to uncover and become aware of these programs.</p>
-
     <p>Once you become conscious of them, you can begin to cleanse the subconscious and overwrite the negative programs.</p>
-
     <p>You cannot simply delete them, because that would leave an empty space. Instead, you must always replace the negative one with a new, positive program.</p>
-
     <p>For example: during communication, someone’s words or behavior do not meet your expectations, triggering the emotion of offense in you.</p>
-
     <p>Every person is like a radio station that constantly generates energy with their thoughts, words, and emotions and broadcasts it.</p>
-
-    <p>Others pick up on this energy when they interact with that person, or even from the other side of the world just thinking about them.</p>
-
-    <p>The energy field produced by a person is strongest around them; they live within their own field.</p>
-
-    <p>The energy of offense is negative and destructive. It causes bad feelings, breaks down organic matter, and creates disease.</p>
-
+    <p>Others pick up on this energy when they interact with that person, or even from the other side of the world just by thinking about them.</p>
+    <p>A person’s energy field is strongest around themselves; they live within the field they create.</p>
+    <p>Offense energy is negative and destructive—it causes ill-feeling, breaks down organic matter, and creates disease.</p>
     <p>The goal is to overwrite the negative offense program.</p>
-
-    <p>When your partner’s words or behavior do not meet your expectations, you consciously choose not to feel offended and instead adopt understanding.</p>
-
-    <p>You see and understand why they said and acted that way, because they too are driven by negative subconscious programs. They are not to blame; they simply lack awareness, and therefore you can forgive them.</p>
-
-    <p>Now that you are aware, you can consciously choose a reaction that suits you, improves your well-being, and heals your body.</p>
-
-    <p>We are all, in a spiritual sense, children. You must bring yourself to the level of communicating with a child.</p>
-
-    <p>When a small child’s words or behavior do not meet your expectations, you usually do not take offense; you smile, forgive them, and respond with love.</p>
-
-    <p>In the same way, you must now interact with adults.</p>
-
-    <p>Negative energy repels, and positive energy attracts.</p>
-
-    <p>If you constantly generate and inhabit a negative energy field, others will subconsciously avoid you. They feel they dislike you and do not want to be with or interact with you.</p>
-
-    <p>But if you generate and inhabit positive energy, everyone will want to interact and befriend you, because positive energy attracts.</p>
-
-    <p>The most repelling energy is that of depression and despair, and the most attractive is the energy of joy and zest for life.</p>
+    <p>If someone’s words or behavior don’t meet your expectations, consciously choose understanding instead of offense.</p>
+    <p>You see why they said and did what they did, because they too act under their own negative subconscious programming. They aren’t at fault—they simply aren’t aware—so you can forgive them.</p>
+    <p>Now that you are aware, you can choose a response that improves your well-being and heals your body.</p>
+    <p>We are all spiritual children. Meet adults at the level of a child’s communication:</p>
+    <p>If a toddler’s words or behavior don’t meet your expectations, you usually don’t get offended. You smile, forgive them, and respond with love.</p>
+    <p>In the same way, now begin to interact with adults.</p>
+    <p>Negative energy repels, while positive energy attracts.</p>
+    <p>If you constantly generate and dwell in negativity, others sense it and subconsciously keep their distance.</p>
+    <p>But if you generate and inhabit positive energy, everyone will want to talk and connect with you—positive energy draws them in.</p>
+    <p>Despair and hopelessness push people away most; joy of life attracts them most.</p>
   </main>
 
-  <!-- Contact -->
+  <!-- Footer with contact email -->
   <footer class="contact-bar">
     <a href="mailto:info@pabah.com">Contact: info@pabah.com</a>
   </footer>
+
 </body>
 </html>
