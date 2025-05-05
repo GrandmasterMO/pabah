@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HYPNOS AND CLEERS</title>
-
   <style>
     @font-face {
       font-family: 'Roboto-Light';
@@ -13,7 +12,6 @@
     @font-face {
       font-family: 'Roboto-Bold';
       src: url('fonts/Roboto-Bold.ttf') format('truetype');
-      font-weight: bold;
     }
     @font-face {
       font-family: 'Roboto-Medium';
@@ -35,14 +33,21 @@
     }
 
     .header {
-      width: 100%;
-      display: block;
       position: relative;
+      overflow: hidden;
+      width: 100%;
     }
 
     .header img {
       width: 100%;
       display: block;
+      object-fit: cover;
+    }
+
+    .black-bar {
+      width: 100%;
+      height: 4px;
+      background-color: black;
     }
 
     .search-container {
@@ -52,7 +57,7 @@
     }
 
     .search-box {
-      padding: 8px 30px 8px 12px;
+      padding: 8px 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 14px;
@@ -64,11 +69,10 @@
 
     .search-icon {
       position: absolute;
-      right: 12px;
+      right: 10px;
       top: 50%;
       transform: translateY(-50%);
       pointer-events: none;
-      font-size: 14px;
     }
 
     .container {
@@ -123,15 +127,29 @@
       border-radius: 8px;
     }
 
-    /* --- Mobile-specific adjustments --- */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 24px;
-        text-align: left;
+      .header img {
+        width: 120%;
+        transform: translateX(-10%);
       }
 
-      h2 {
-        font-size: 20px;
+      .search-container {
+        position: static;
+        margin: 10px 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-box {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       .article-image {
@@ -145,14 +163,13 @@
         padding: 10px 15px;
       }
 
-      .search-container {
-        top: 10px;
-        right: 10px;
+      h1 {
+        font-size: 24px;
+        text-align: left;
       }
 
-      .search-box {
-        width: 160px;
-        font-size: 14px;
+      h2 {
+        font-size: 20px;
       }
     }
   </style>
@@ -163,10 +180,13 @@
     <a href="index.html">
       <img src="images/header4.png" alt="Pabah.com banner" />
     </a>
-    <div class="search-container">
-      <input type="text" class="search-box" placeholder="Search stories..." />
-      <span class="search-icon">🔍</span>
-    </div>
+  </div>
+
+  <div class="black-bar"></div>
+
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search stories..." />
+    <span class="search-icon">🔍</span>
   </div>
 
   <div class="container">
