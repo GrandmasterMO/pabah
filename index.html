@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>INFORMATION</title>
 
-  <!-- GovtAgentBB for titles -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
   <style>
+    /* --- Fondid --- */
     @font-face {
-      font-family: 'GovtAgentBB';
-      src: url('fonts/GovtAgentBB.otf') format('opentype');
+      font-family: 'Roboto-Regular';
+      src: url('fonts/Roboto-Regular.ttf') format('truetype');
       font-weight: normal;
-      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Roboto-Bold';
+      src: url('fonts/Roboto-Bold.ttf') format('truetype');
+      font-weight: bold;
     }
 
     body {
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      font-family: 'GovtAgentBB', sans-serif;
+      background: #fff;
+      font-family: 'Roboto-Regular', sans-serif;
+      color: #000;
     }
 
-    /* Header image */
-    .header-image {
+    /* --- Header --- */
+    .header {
+      position: relative;
+      width: 100%;
+    }
+    .header a {
+      display: block;
+    }
+    .header img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    /* Thin white line */
-    .divider {
-      height: 2px;
-      background-color: #fff;
+    /* õhuke must triip headeri alla */
+    .header-divider {
+      height: 4px;
+      background: #000;
     }
 
-    /* Black band under header */
-    .black-band {
-      background-color: #000;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    /* Stories grid */
+    /* --- Lugude galerii --- */
     .stories {
       display: flex;
       flex-wrap: wrap;
@@ -51,37 +59,40 @@
     }
     .story {
       width: 200px;
-      text-align: center;
       background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
+      text-decoration: none;
     }
     .story img {
       width: 100%;
-      height: auto;
       display: block;
     }
     .story-title {
-      margin: 15px 0;
+      margin: 12px;
+      font-family: 'Roboto-Bold', sans-serif;
       font-size: 18px;
+      text-transform: uppercase;
+      color: #000;
       line-height: 1.2;
+      text-align: center;
     }
 
-    /* Contact bar */
+    /* --- Contact --- */
     .contact-bar {
-      background-color: #000;
-      color: #fff;
+      background: #000;
       text-align: center;
-      padding: 10px 0;
-      font-size: 14px;
+      padding: 12px 0;
     }
     .contact-bar a {
-      color: #fff;
-      text-decoration: underline;
+      font-family: 'Roboto-Regular', sans-serif;
+      color: #E5FF00;
+      text-decoration: none;
+      font-size: 14px;
     }
 
-    /* Responsive row for mobile */
+    /* --- Mobiil --- */
     @media (max-width: 600px) {
       .stories {
         flex-direction: column;
@@ -95,34 +106,33 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- Header bänner -->
+  <header class="header">
+    <a href="index.html">
+      <img src="images/header4.png" alt="Pabah.com banner">
+    </a>
+  </header>
 
-  <!-- Main header -->
-  <img src="images/header4.png" alt="Header Banner" class="header-image">
+  <!-- Must triip headeri all (teksti pole) -->
+  <div class="header-divider"></div>
 
-  <div class="divider"></div>
-  <div class="black-band">
-    <div style="color:white; font-size:24px;">SEEK AND FIND</div>
-  </div>
-
-  <!-- Stories on front page -->
-  <div class="stories">
-    <!-- Story 1 -->
+  <!-- Lugude thumbnailid -->
+  <main class="stories">
     <a href="hypnos-and-cleers.html" class="story">
-      <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers Thumbnail">
-      <div class="story-title">HYPNOS AND CLEERS</div>
+      <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers">
+      <div class="story-title">Hypnos and Cleers</div>
     </a>
-    <!-- Story 2 -->
     <a href="chapters-of-self-help.html" class="story">
-      <img src="images/Palmisaar2.jpg" alt="Chapters of Self-Help Thumbnail">
-      <div class="story-title">CHAPTERS OF SELF-HELP</div>
+      <img src="images/Palmisaar2.jpg" alt="Chapters of Self-Help">
+      <div class="story-title">Chapters of Self-Help</div>
     </a>
-  </div>
+  </main>
 
-  <!-- Footer contact -->
-  <div class="contact-bar">
-    Contact: <a href="mailto:info@pabah.com">info@pabah.com</a>
-  </div>
-
+  <!-- Contact-riba -->
+  <footer class="contact-bar">
+    <a href="mailto:info@pabah.com">Contact: info@pabah.com</a>
+  </footer>
 </body>
 </html>
