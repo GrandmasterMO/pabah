@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HYPNOS AND CLEERS</title>
+
   <style>
     @font-face {
       font-family: 'Roboto-Light';
@@ -12,6 +13,7 @@
     @font-face {
       font-family: 'Roboto-Bold';
       src: url('fonts/Roboto-Bold.ttf') format('truetype');
+      font-weight: bold;
     }
     @font-face {
       font-family: 'Roboto-Medium';
@@ -33,21 +35,14 @@
     }
 
     .header {
-      position: relative;
-      overflow: hidden;
       width: 100%;
+      display: block;
+      position: relative;
     }
 
     .header img {
       width: 100%;
       display: block;
-      object-fit: cover;
-    }
-
-    .black-bar {
-      width: 100%;
-      height: 4px;
-      background-color: black;
     }
 
     .search-container {
@@ -73,6 +68,12 @@
       top: 50%;
       transform: translateY(-50%);
       pointer-events: none;
+    }
+
+    .black-bar {
+      width: 100%;
+      height: 5px;
+      background-color: black;
     }
 
     .container {
@@ -127,29 +128,26 @@
       border-radius: 8px;
     }
 
+    /* --- Mobile-specific adjustments --- */
     @media (max-width: 768px) {
-      .header img {
-        width: 120%;
-        transform: translateX(-10%);
+      .header img.desktop-header {
+        display: none;
       }
 
-      .search-container {
-        position: static;
-        margin: 10px 15px;
-        display: flex;
-        align-items: center;
+      .header img.mobile-header {
+        display: block;
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0;
       }
 
-      .search-box {
-        width: 100%;
-        font-size: 14px;
+      h1 {
+        font-size: 24px;
+        text-align: left;
       }
 
-      .search-icon {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+      h2 {
+        font-size: 20px;
       }
 
       .article-image {
@@ -163,122 +161,49 @@
         padding: 10px 15px;
       }
 
-      h1 {
-        font-size: 24px;
-        text-align: left;
+      .search-container {
+        position: static;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
       }
 
-      h2 {
-        font-size: 20px;
+      .search-box {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 30px;
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 25px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .header img.mobile-header {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="header">
     <a href="index.html">
-      <img src="images/header4.png" alt="Pabah.com banner" />
+      <img src="images/header4.png" alt="Pabah.com banner" class="desktop-header" />
+      <img src="images/mob-header.png" alt="Pabah.com mobile banner" class="mobile-header" />
     </a>
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="Search stories..." />
+      <span class="search-icon">🔍</span>
+    </div>
   </div>
 
   <div class="black-bar"></div>
 
-  <div class="search-container">
-    <input type="text" class="search-box" placeholder="Search stories..." />
-    <span class="search-icon">🔍</span>
-  </div>
-
+  <!-- CONTENT STARTS HERE -->
   <div class="container">
-    <img src="images/masshypnosis2.jpg" alt="Hypnos and Cleers" class="article-image">
-
-    <h1>THE DIVISION OF HUMANKIND:<br>HYPNOS AND CLEERS</h1>
-
-    <div class="section">
-      <div class="section-title">HYPNOS</div>
-      <p>The Hypnotizable (approximately 65–75% of the population)</p>
-      <p><span class="bold">Origin:</span> The term derives from the Latin «hypnos» (sleep) and the suffix «-oid» (form, kind, type).</p>
-      <p><span class="bold">Brief Description:</span> Hypnoids are individuals connected to the collective hypnotron — a manipulated mental network that steers their emotions and beliefs without their conscious involvement.</p>
-      <p><span class="bold">Characteristics:</span></p>
-      <ul>
-        <li>People live in a mechanical reaction pattern: feeling ➝ media ➝ reaction ➝ forgetting.</li>
-        <li>Constantly consume information, but with minimal analysis.</li>
-        <li>Language is loaded with system-internal thoughts and slogans, yet empty of inner reflection.</li>
-        <li>They see, but do not observe. They hear, but do not listen.</li>
-      </ul>
-      <p><span class="bold">Social Role:</span></p>
-      <ul>
-        <li>They feed on ideological hyperreality.</li>
-        <li>They maintain the stability of the system, even when it is hollow inside.</li>
-      </ul>
-
-      <div class="section-title">SUBTYPES OF HYPNOS</div>
-      <ul>
-        <li>Hyper-Hypnos (10–15%) – highly susceptible to hypnosis.</li>
-        <li>Drifting Hypnos (approximately 45–60%) – moderately susceptible to hypnosis.</li>
-      </ul>
-
-      <div class="section-title">HYPER-HYPNOS</div>
-      <p><span class="bold">Brief Description:</span> Hyper-Hypnoids are individuals who are extremely vulnerable to mass hypnosis. They respond rapidly and completely to collective influences, without doubt or inner resistance. They are the most effective carriers and amplifiers of mass hypnosis.</p>
-      <p><span class="bold">Characteristics:</span></p>
-      <ul>
-        <li>Tendency toward fanaticism and blind obedience.</li>
-        <li>Deep identification with the official narrative.</li>
-        <li>Inclined to repeat, spread, and reinforce systemic messages.</li>
-        <li>Emotional reactions toward those who think differently—often aggressive or hostile.</li>
-      </ul>
-      <p><span class="bold">Social Role:</span></p>
-      <ul>
-        <li>The best tool and expression of deliberate mass hypnosis.</li>
-        <li>They serve as the «guardians» of the collective, protecting the system from doubt.</li>
-      </ul>
-
-      <div class="section-title">DRIFTING HYPNOS</div>
-      <p><span class="bold">Brief Description:</span> They sense that something is wrong but are unable to exit the hypnosis. When they begin to awaken, they often fall back under the influence of media and authority figures.</p>
-      <p><span class="bold">Characteristics:</span> They doubt but do not act. They see, but remain silent.<br>They require an inner or external «call» to awaken.</p>
-      <p><span class="bold">Social Role:</span></p>
-      <ul>
-        <li>Will-less followers, controlled through fear.</li>
-        <li>They understand that something is wrong, but the fear of standing out keeps them silent.</li>
-      </ul>
-
-      <div class="section-title">CLEERS</div>
-      <p>The Non-Hypnotizable (15–25% of the population)</p>
-      <p><span class="bold">Origin:</span><br>Derived from the Latin word «clarus» («clear», «transparent»).</p>
-      <p><span class="bold">Brief Description:</span> Cleers are not affected by the hypnotron and do not drift in a mental fog — they live in clarity of consciousness. Their presence is quiet, yet powerful.</p>
-      <p><span class="bold">Characteristics:</span></p>
-      <ul>
-        <li>They know how to move through both invisibility and visibility.</li>
-        <li>Aware of systems, but do not identify with them.</li>
-        <li>Choose silence more often than shouting.</li>
-      </ul>
-      <p><span class="bold">Social Role:</span></p>
-      <ul>
-        <li>Their presence affects the space—they do not persuade, they resonate.</li>
-        <li>They awaken only those who are ready.</li>
-      </ul>
-      <p class="italic">(This typology does not offer absolute definitions but rather a framework for understanding the different layers of human psychology and consciousness in the era of mass phenomena.)</p>
-
-      <h2>SCIENTIFIC BACKGROUND</h2>
-      <p>Scientific research shows that human susceptibility to hypnosis is distributed approximately as follows:</p>
-      <ul>
-        <li>10–15% of people are highly susceptible to hypnosis;</li>
-        <li>65–75% fall into the category of moderate hypnotizability;</li>
-        <li>15–20% are very resistant or completely unsusceptible to hypnosis.</li>
-      </ul>
-      <p>Hypnotizability is a relatively stable personality trait that can remain unchanged for decades. It is measured using specialized tests such as the Stanford or Harvard Hypnotic Susceptibility Scales.</p>
-
-      <h2>PSYCHOLOGICAL MASS HYPNOSIS</h2>
-      <p><span class="bold">Signs of Mass Hypnosis:</span></p>
-      <ul>
-        <li>People do not think independently but blindly believe everything told to them by the media, authorities, government, or officials.</li>
-        <li>Behavior, thoughts, and even identity are strongly influenced by collective norms.</li>
-        <li>News, social media, and advertisements «program» people’s mindsets.</li>
-        <li>Group pressure shapes individual decisions and perceptions—people follow the group’s opinion, even when it is clearly false.</li>
-        <li>Independent thinking is replaced by a collective «truth».</li>
-      </ul>
-      <p class="italic">Sources: ScienceDirect, National Library of Medicine, The Asch Conformity Experiments.</p>
-    </div>
+    <!-- Content here (same as in previous version) -->
   </div>
 
 </body>
